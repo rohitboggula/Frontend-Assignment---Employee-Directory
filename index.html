@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employee Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="header">
+    <h1>Employee Directory</h1>
+    <div class="header-controls">
+      <input type="text" id="search" placeholder="Search by name or email" />
+      <select id="sortSelect">
+        <option value="">Sort</option>
+        <option value="name">Name</option>
+        <option value="department">Department</option>
+      </select>
+      <button id="addEmployeeBtn">Add Employee</button>
+    </div>
+  </div>
+
+  <main id="employee-list" class="employee-grid"></main>
+
+  <footer>
+    <p>© 2025 Employee Directory App. All rights reserved.</p>
+  </footer>
+
+  <!-- Add/Edit Employee Form Modal -->
+  <div id="employeeFormModal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="formTitle">Add Employee</h2>
+      <form id="employeeForm">
+        <input type="hidden" id="empId" />
+        <label>
+          First name
+          <input type="text" id="firstName" required />
+        </label>
+        <label>
+          Last name
+          <input type="text" id="lastName" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="email" required />
+        </label>
+        <label>
+          Department
+          <input type="text" id="department" required />
+        </label>
+        <label>
+          Role
+          <input type="text" id="role" required />
+        </label>
+        <div class="form-actions">
+          <button type="button" id="cancelBtn">Cancel</button>
+          <button type="submit">Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
